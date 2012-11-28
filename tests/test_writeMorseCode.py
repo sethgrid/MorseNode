@@ -4,7 +4,7 @@ from writeMorseCode import *
 def test_write():
     string = "the quick brown fox jumps over the lazy dog"
     expected_compact = "-.....--.-..-..-.-.-.--....-.---.---...-.----..-.---..---.--....---...-..-.-......-...---..-.---..-----."
-    expected = "- .... . --.- ..- .. -.-. -.- -... .-. --- .-- -. ..-. --- -..- .--- ..- -- .--. ... --- ...- . .-. - .... . .-.. .- --.. -.-- -.. --- --."
+    expected = "- .... .    --.- ..- .. -.-. -.-    -... .-. --- .-- -.    ..-. --- -..-    .--- ..- -- .--. ...    --- ...- . .-.    - .... .    .-.. .- --.. -.--    -.. --- --."
 
     result_compact = encodeMorse(string, is_compact=True)
     result = encodeMorse(string, is_compact=False)

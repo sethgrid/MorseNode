@@ -30,16 +30,18 @@ def encodeMorse(string, is_compact):
     mHash = getHash()
     returnString = ''
 
-    # if we are compact, there is no space between character output
-    if is_compact:
-        concat = '';
-    else:
-        concat = ' ';
+    # morse code has three spaces between words, one space between characters
+    string = string.replace(" ", "   ")
 
     # for each char in string, append it to the return string if it is in the morse code hash
     for i in string.lower():
+        if i == " ":
+            returnString += " "
         if i in mHash:
-            returnString += mHash[i] + concat
+            returnString += mHash[i] + " "
+
+    if is_compact:
+        returnString = returnString.replace(" ", "")
 
     return returnString.strip()
 
