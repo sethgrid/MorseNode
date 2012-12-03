@@ -1,1 +1,1 @@
-created dictionary.txt by merge sorting all the other partial dictionaries, adding "I" to the list. Then removing all apostrophe chars and makeing everything lower, and removing duplicates. 
+created dictionary.txt by merge sorting all the other partial dictionaries, adding "I" and "a" to the list. Then removing all apostrophe chars and makeing everything lower, and removing duplicates.

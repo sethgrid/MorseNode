@@ -7,7 +7,7 @@ DICTIONARY_SOURCE = 'ispell-enwl/dictionary.txt'
 
 def create_persistent_dictionary(filename):
     raw_input ("This will create or overwrite the persistent dictionary."
-               " Press any key to continue or Ctrl+c to quit.")
+               " Press ENTER to continue or Ctrl+c to quit.")
 
     # Let the user know something is going on
     print "START";
