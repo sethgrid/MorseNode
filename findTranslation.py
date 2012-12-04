@@ -1,6 +1,7 @@
 import MorseNode
 from mHash import getHash
 from findWord import findWord
+from writeMorseCode import encodeMorse
 
 def populateNodes(starting_string):
     # init the tree
@@ -15,9 +16,9 @@ def populateNodes(starting_string):
     keep_going = True
     while (keep_going):
         for CurrNode in nodeList:
+            current_index = len(CurrNode.data)
             possibleChars = getPossibleNextChars(current_index, starting_string)
             print "Data: %s" % CurrNode.data
-            print "Possible Chars: %s" % possibleChars
 
             validChars = checkForValidChars(possibleChars, CurrNode, starting_string)
             print "Valid Chars: %s" % validChars
@@ -28,39 +29,68 @@ def populateNodes(starting_string):
 
             tempNodeList = []
             for char in validChars:
-                tempNodeList.append = Node.addChild(Node.data + char)
+                data = CurrNode.data + char
+                print "checking if data (%s) is in starting string" % data
+                if dataMatchesString(data, starting_string) and data != " " and len(data) > 0:
+                    print "creating child with data: %s" % data
+                    tempNodeList.append(Node.addChild(MorseNode.MorseNode(data)))
+
+                print 'done with %s' % char
+            print 'done with %s' % validChars
         nodeList = tempNodeList[:]
     return Node
 
+def dataMatchesString(data, starting_string):
+    translatedData = encodeMorse(data, is_compact=True)
+    if starting_string.find(translatedData) == 0:
+        return True
+    return False
+
 def checkForValidChars(possibleChars, CurrNode, starting_string):
     string_so_far = CurrNode.data
+    print "string so far: %s " % string_so_far
+
     if string_so_far == '' or string_so_far[-1] == ' ':
         last_part = ''
     else:
         parts = string_so_far.split()
         last_part = parts[-1]
 
+    print "last part: %s" % last_part
+
     valid_chars = []
 
     for char in possibleChars:
         isValidNextChar = wordPossible(last_part + char)
-        if isValidNextChar:
+        print "%s is valid? %s" % (last_part + char, isValidNextChar)
+        if isValidNextChar == 'partial_word':
+            valid_chars.append(char)
+        elif isValidNextChar == 'word_with_no_children':
+            valid_chars.append(char + " ")
+        elif isValidNextChar == 'word_with_children':
+            valid_chars.append(char + " ")
             valid_chars.append(char)
 
     return valid_chars
 
 def wordPossible(string):
     result = findWord(string)
+
     if result != 0:
-        if (result['is_a_word'] == 0 or result['children'] > 0):
-            True
+        if (result['is_a_word'] == True and result['children'] > 0):
+            return 'word_with_children'
+        if (result['is_a_word'] == True and result['children'] == 0):
+            return 'word_with_no_children'
+        if (result['is_a_word'] == False and result['children'] > 0):
+            return 'partial_word'
 
     return False;
 
 def getPossibleNextChars(current_index, starting_string):
     mHash = getHash()
-    return_list = [' '] # always consider space a possibility. will be ruled out later if need be.
+    return_list = []
     inspect_string = starting_string[current_index:]
+    print "inspectectin at index %s" % current_index
     for alpha in mHash:
         if inspect_string.find(mHash[alpha]) == 0:
             return_list.append(alpha)
