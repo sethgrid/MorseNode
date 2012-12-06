@@ -5,27 +5,6 @@ from findWord       import findWord
 from writeMorseCode import encodeMorse
 
 '''
-troublesome words to remove from dictionary
-ta
-te
-rin
-re
-mo
-es
-el
-et
-ut
-ere
-om
-ma
-ti
-usn
-de
-mam
-'''
-
-
-'''
 DecodeMorse takes in Morse Code with no spaces and finds possible decodings
 '''
 class DecodeMorse(object):
