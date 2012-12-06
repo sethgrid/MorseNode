@@ -16,7 +16,6 @@ def populateNodes(starting_string):
     keep_going = True
     while (keep_going):
         for CurrNode in nodeList:
-            current_index = len(CurrNode.data)
             possibleChars = getPossibleNextChars(current_index, starting_string)
             print "Data: %s" % CurrNode.data
 
@@ -62,7 +61,7 @@ def checkForValidChars(possibleChars, CurrNode, starting_string):
 
     for char in possibleChars:
         isValidNextChar = wordPossible(last_part + char)
-        print "%s is valid? %s" % (last_part + char, isValidNextChar)
+        print "%s is valid? %s" % (char, isValidNextChar)
         if isValidNextChar == 'partial_word':
             valid_chars.append(char)
         elif isValidNextChar == 'word_with_no_children':
@@ -88,7 +87,6 @@ def wordPossible(string):
 
 def getPossibleNextChars(current_index, starting_string):
     mHash = getHash()
-    return_list = []
     inspect_string = starting_string[current_index:]
     print "inspectectin at index %s" % current_index
     for alpha in mHash:
