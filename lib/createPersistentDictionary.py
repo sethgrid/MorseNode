@@ -2,6 +2,11 @@ import shelve
 import os, errno
 from time import time
 
+'''
+For a different dicitonary of words:
+Change the dictionary source to a new dictionary were each line is a different word.
+'''
+
 PERSIST_DICT_FILE = 'persistent_dict'
 DICTIONARY_SOURCE = '../ispell-enwl/dictionary.txt'
 
