@@ -1,7 +1,7 @@
 #!/usr/bin python
 
 from optparse import OptionParser
-from mHash import getHash
+from lib.encodeMorse import encodeMorse
 
 """
 writeMorseCode takes in a string from the command line and returns the morse code translation,
@@ -25,25 +25,6 @@ def main():
 
     print encodeMorse(args[0], options.is_compact)
 
-def encodeMorse(string, is_compact):
-    # get the morse code hash table
-    mHash = getHash()
-    returnString = ''
-
-    # morse code has three spaces between words, one space between characters
-    string = string.replace(" ", "   ")
-
-    # for each char in string, append it to the return string if it is in the morse code hash
-    for i in string.lower():
-        if i == " ":
-            returnString += " "
-        if i in mHash:
-            returnString += mHash[i] + " "
-
-    if is_compact:
-        returnString = returnString.replace(" ", "")
-
-    return returnString.strip()
 
 if __name__ == '__main__':
     main()
