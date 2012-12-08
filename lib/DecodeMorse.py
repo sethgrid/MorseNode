@@ -45,6 +45,8 @@ class DecodeMorse(object):
         data = CurrNode.data
 
         possible_chars = self.getPossibleNextChars(data)
+
+        # valid_chars could return a char or a char plus a space
         valid_chars = self.findValidNextChars(possible_chars, data)
 
         if not valid_chars:
@@ -54,48 +56,32 @@ class DecodeMorse(object):
             new_data = data + char
 
             if self.nodeDataMatchesRawMorse(new_data):
-                if self.allWordsValid(new_data):
-                    print new_data
+                if self.lastWordValid(new_data):
                     self.matching_strings.append(new_data)
                     self.countMatches += 1
 
             elif self.nodeDataConsistentWithRawMorse(new_data):
-                if self.lastWordValid(new_data):
+                # if the last char is a space, check that last word is valid. 
+                # otherwise, just create child node
+                if char[-1] is not ' ' or (char[-1] is ' ' and self.lastWordValid(new_data)):
                     CurrNode.addChild(MorseNode(new_data))
                     self.countChildren += 1
-
-                else: CurrNode.addChild(MorseNode(new_data))
 
         for Child in CurrNode.children:
             self.walkNode(Child)
 
     '''
-    make sure all words are valid prior to saying we have a match.
-    this mostly prevents the last word from containing a partial word
-    yet still matching the original morse code
-    '''
-    def allWordsValid(self, data):
-        words = data.split()
-        for word in words:
-            result = findWord(word)
-            if result == 0 or result['is_a_word'] == False:
-                return False
-
-        return True
-
-    '''
-    if we complete a word (now the last char is space), make sure that last
+    if we complete a word, make sure that last
     word is valid
     '''
     def lastWordValid(self, data):
-        # if the last char is a space, verify last word
-        if data[-1] == ' ':
-            words = data.split()
-            result = findWord(words[-1])
-            if result != 0 and result['is_a_word'] == True:
-                return True
-        # we are still building the last word, presume valid
-        return True
+        words = data.split()
+        result = findWord(words[-1])
+
+        if result != 0 and result['is_a_word'] == True:
+            return True
+
+        return False
 
     '''
     checks if we found a complete match for original raw morse
