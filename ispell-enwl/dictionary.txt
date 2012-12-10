@@ -36968,13 +36968,10 @@ edmonton
 edmontons
 edmund
 edna
-edo
 edom
 edomite
-edp
 edsger
 edsgers
-edt
 eduard
 eduardo
 eduardos
@@ -37249,28 +37246,17 @@ eightsome
 eighty
 eightyfold
 eijkman
-eikon
 eilat
 eileen
-ein
 eindhoven
-eine
 einkorn
 einstein
 einsteinian
 einsteinium
-eire
 eirenic
 eirenicon
-eires
-eisegesis
-eisenach
 eisenhower
-eisenstadt
-eisenstein
 eisk
-eisner
-eisners
 eisteddfod
 either
 ejaculate
@@ -39880,7 +39866,6 @@ equivocator
 equivoke
 equivoque
 equuleus
-era
 eradiate
 eradicable
 eradicably
@@ -40283,7 +40268,6 @@ establishments
 estancia
 estate
 estates
-este
 esteem
 esteemable
 esteemed
@@ -40543,12 +40527,10 @@ etiology
 etiologys
 etiquette
 etna
-eton
 etruria
 etruscan
 etude
 etudes
-etui
 etymological
 etymologically
 etymologies
@@ -41910,7 +41892,6 @@ exsiccate
 exsiccation
 exstipulate
 exstrophy
-ext
 extant
 extemporal
 extemporally
@@ -49797,8 +49778,6 @@ glyptic
 glyptics
 glyptodont
 glyptography
-gm
-gmt
 gnarl
 gnarled
 gnarls
@@ -57394,7 +57373,6 @@ idles
 idlest
 idling
 idly
-ido
 idocrase
 idol
 idolater
@@ -57429,7 +57407,6 @@ idolizing
 idols
 idolum
 idomeneus
-idun
 idyll
 idyllic
 idyllically
@@ -64864,7 +64841,6 @@ klutzy
 klux
 klystron
 klystrons
-km
 knack
 knacker
 knackery
@@ -71001,9 +70977,6 @@ manyplies
 manzanilla
 manzanita
 manzoni
-mao
-maoism
-maori
 map
 maple
 maplecrest
@@ -71748,7 +71721,6 @@ matisse
 matisses
 matlo
 matlock
-mato
 matoke
 matopo
 matorin
@@ -72729,7 +72701,6 @@ meltwaters
 melungeon
 melville
 melvin
-mem
 member
 membered
 members
@@ -77208,7 +77179,6 @@ mowers
 mowing
 mown
 mows
-moxa
 moxie
 moyer
 moyers
@@ -77218,11 +77188,8 @@ mozart
 mozarts
 mozzarella
 mr
-mridang
 mrs
 ms
-mt
-mts
 mtv
 much
 muchness
@@ -81979,7 +81946,6 @@ okavango
 okay
 okayama
 okays
-oke
 okeechobee
 okefenokee
 okhotsk
@@ -83292,7 +83258,6 @@ otolaryngology
 otology
 otoscope
 otranto
-ott
 ottar
 ottava
 ottawa
@@ -84412,7 +84377,6 @@ ownership
 ownerships
 owning
 owns
-owt
 ox
 oxacillin
 oxalacetate
@@ -101509,7 +101473,6 @@ resynthesise
 resynthesises
 resynthesize
 resynthesizes
-ret
 retable
 retail
 retailed
@@ -119351,7 +119314,6 @@ taluk
 talus
 talvela
 talweg
-tam
 tamable
 tamale
 tamandua
@@ -119756,7 +119718,6 @@ tastily
 tastiness
 tasting
 tasty
-tat
 tatami
 tatar
 tatary
@@ -125429,7 +125390,6 @@ tulle
 tullibee
 tully
 tulsa
-tum
 tumble
 tumblebug
 tumbled
