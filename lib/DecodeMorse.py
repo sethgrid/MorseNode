@@ -27,6 +27,12 @@ class DecodeMorse(object):
         self.walkNode(self.ParentNode)
 
     '''
+    accessor for matching strings
+    '''
+    def getMatches(self):
+        return self.matching_strings
+
+    '''
     display the results of translate
     '''
     def showMatches(self):
