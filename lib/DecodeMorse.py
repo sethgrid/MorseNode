@@ -62,6 +62,7 @@ class DecodeMorse(object):
             new_data = data + char
 
             if self.nodeDataMatchesRawMorse(new_data):
+                #print new_data
                 if self.lastWordValid(new_data):
                     self.matching_strings.append(new_data)
                     self.countMatches += 1

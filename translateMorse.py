@@ -5,6 +5,7 @@ if __name__ == '__main__':
     #starting_string = '......' # hi
     #starting_string = '-.-.-----.--...--..-.' # computer
     #starting_string = '-.....--.-..-..-.-.-.--....-.---.---...-.----..-.---..---.--....---...-..-.-......-...---..-.---..-----.'
+    #starting_string = '-..-...-...-...-..-.-.-.-.-..-.-.-.-.-.-.-.-.-.-..-...-.' #?
 
     Morse = DecodeMorse(starting_string)
     Morse.translate()
